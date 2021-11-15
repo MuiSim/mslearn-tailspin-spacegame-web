@@ -2,9 +2,9 @@ trigger:
 - '*'
 
 pool:
-  vmImage: 'ubuntu-20.04'
+  vmImage: Default
   demands:
-  - npm
+  - mydockeragent
 
 variables:
   buildConfiguration: 'Release'
