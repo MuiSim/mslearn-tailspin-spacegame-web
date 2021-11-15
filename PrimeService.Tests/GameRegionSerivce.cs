@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 using TailSpin.SpaceGame.Web;
 using TailSpin.SpaceGame.Web.Models;
 
-namespace Tailspin.SpaceGame.Web.UnitTest
-{
-   
+
+
     [TestFixture()]
     public class GameRegionSerivce
     {
@@ -41,6 +40,5 @@ namespace Tailspin.SpaceGame.Web.UnitTest
             // Verify that each score's game region matches the provided game region.
             Assert.That(scores, Is.All.Matches<Score>(score => score.GameRegion == gameRegion));
         }
-        
+
     }
-}
