@@ -9,9 +9,11 @@ using TailSpin.SpaceGame.Web.Models;
 
 namespace Tailspin.SpaceGame.Web.UnitTest
 {
+   
+    [TestFixture()]
     public class GameRegionSerivce
     {
-        private IDocumentDBRepository<Score> _scoreRepository;
+        private IDocumentDBRepository<Score> _scoreRepository = new LocalDocumentDBRepository<Score>(@"SampleData/scores.json");
 
         [TestCase("Milky Way")]
         [TestCase("Andromeda")]
@@ -39,5 +41,6 @@ namespace Tailspin.SpaceGame.Web.UnitTest
             // Verify that each score's game region matches the provided game region.
             Assert.That(scores, Is.All.Matches<Score>(score => score.GameRegion == gameRegion));
         }
+        
     }
 }
