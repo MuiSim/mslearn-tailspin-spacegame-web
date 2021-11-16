@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 using TailSpin.SpaceGame.Web;
 using TailSpin.SpaceGame.Web.Models;
 
-
+namespace Tailspon.SpaceGame.Web.Tests
+{
 
     [TestFixture()]
     public class GameRegionSerivce
@@ -42,3 +43,4 @@ using TailSpin.SpaceGame.Web.Models;
         }
 
     }
+}
