@@ -2,9 +2,7 @@ trigger:
 - '*'
 
 pool:
-  vmImage: Default
-  demands:
-  - mydockeragent
+  domain: Default
 
 variables:
   buildConfiguration: 'Release'
